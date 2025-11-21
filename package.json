@@ -3,6 +3,7 @@
   "displayName": "SDL Language Support",
   "description": "Syntax highlighting for Service Definition Language (SDL) v0.1",
   "version": "0.1.0",
+  "publisher": "marcelsud",
   "license": "MIT",
   "repository": {
     "type": "git",
