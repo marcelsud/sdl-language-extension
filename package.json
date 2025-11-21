@@ -1,6 +1,6 @@
 {
   "name": "sdl-language",
-  "displayName": "SDL Language Support",
+  "displayName": "Service Definition Language (SDL) Syntax Highlighting",
   "description": "Syntax highlighting for Service Definition Language (SDL) v0.1",
   "version": "0.1.0",
   "publisher": "marcelsud",
