@@ -1,0 +1,30 @@
+{
+  "name": "sdl-language",
+  "displayName": "SDL Language Support",
+  "description": "Syntax highlighting for Service Definition Language (SDL) v0.1",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcelsud/sdl-language-extension.git"
+  },
+  "engines": {
+    "vscode": "^1.106.1"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "sdl",
+      "aliases": ["Service Definition Language", "sdl"],
+      "extensions": [".sdl"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "sdl",
+      "scopeName": "source.sdl",
+      "path": "./syntaxes/sdl.tmLanguage.json"
+    }]
+  }
+}

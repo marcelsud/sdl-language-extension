@@ -1,0 +1,144 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Service Definition Language",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#annotations"
+		},
+		{
+			"include": "#primitives"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#operators"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.documentation.sdl",
+					"match": "///.*$"
+				},
+				{
+					"name": "comment.line.double-slash.sdl",
+					"match": "//.*$"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.sdl",
+					"match": "\\b(package|import|type|enum|service)\\b"
+				},
+				{
+					"name": "constant.language.boolean.sdl",
+					"match": "\\b(true|false|null)\\b"
+				}
+			]
+		},
+		"annotations": {
+			"patterns": [
+				{
+					"name": "storage.modifier.annotation.sdl",
+					"match": "@[A-Za-z_][A-Za-z0-9_]*(?:\\([^)]*\\))?"
+				}
+			]
+		},
+		"primitives": {
+			"patterns": [
+				{
+					"name": "storage.type.primitive.sdl",
+					"match": "\\b(String|Boolean|Int|Long|Double|Decimal|Bytes|UUID|Timestamp|Unit)\\b"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "entity.name.type.sdl",
+					"match": "\\b[A-Z][A-Za-z0-9_]*\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.sdl",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.sdl",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.sdl",
+					"match": "\\b[-+]?(?:\\d+\\.\\d+|\\d+)\\b"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.arrow.sdl",
+					"match": "->"
+				},
+				{
+					"name": "keyword.operator.union.sdl",
+					"match": "\\|"
+				},
+				{
+					"name": "keyword.operator.nullable.sdl",
+					"match": "\\?"
+				},
+				{
+					"name": "keyword.operator.array.sdl",
+					"match": "\\[\\]"
+				},
+				{
+					"name": "punctuation.section.braces.sdl",
+					"match": "[{}]"
+				},
+				{
+					"name": "punctuation.section.brackets.sdl",
+					"match": "[\\[\\]]"
+				},
+				{
+					"name": "punctuation.section.parens.sdl",
+					"match": "[()]"
+				},
+				{
+					"name": "punctuation.separator.delimiter.sdl",
+					"match": "[,;]"
+				},
+				{
+					"name": "keyword.operator.assignment.sdl",
+					"match": "="
+				},
+				{
+					"name": "keyword.operator.generic.sdl",
+					"match": "[<>]"
+				}
+			]
+		}
+	},
+	"scopeName": "source.sdl"
+}
